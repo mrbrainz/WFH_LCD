@@ -5,39 +5,48 @@ dmp = console.log.bind(console),
 statuses = [
     {
       name: "available",
-      title: "Available"
+      title: "Available",
+      icon: "✅"
     },
     {
       name: "busy",
-      title: "Busy"
+      title: "Busy",
+      icon: "⛔️"
     },
     {
       name: "away",
-      title: "Away"
+      title: "Away",
+      icon: "🏝"
     },
     {
       name: "meeting",
-      title: "In A Meeting"
+      title: "In A Meeting",
+      icon: "👥"
     },
     {
       name: "phone",
-      title: "On The Phone"
+      title: "On The Phone",
+      icon: "📞"
     },
     {
       name: "email",
-      title: "Sending Emails"
+      title: "Sending Emails",
+      icon: "📬"
     },
     {
       name: "video",
-      title: "On A Video Call"
+      title: "On A Video Call",
+      icon: "🎦"
     },
     {
       name: "dout",
-      title: "Me Time"
+      title: "Do Not Enter",
+      icon: "🍆"
     },
     {
       name: "clear",
-      title: "Clear Status Screen"
+      title: "Clear Screen",
+      icon: "⌫"
     }
 ];
 
@@ -152,7 +161,7 @@ function createButtonGrid() {
     var button = document.createElement("button");
     button.className = "action-button btn btn-outline-primary btn-lg btn-block";
     button.id = "action-"+statuses[i].name;
-    button.innerText = statuses[i].title;
+    button.innerHTML = '<span class="icon">'+statuses[i].icon+'</span> '+statuses[i].title;
     button.type = "button";
 
     li.appendChild(button);

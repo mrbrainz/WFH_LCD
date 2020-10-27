@@ -8,6 +8,12 @@ body {
   padding: 0;
 }
 
+.icon {
+  display: block;
+  font-size: 4.1em;
+  filter: grayscale(100%);
+}
+
 #header {
   margin: 20px 0 30px;
 }
@@ -18,8 +24,23 @@ body {
   margin-top: 15px;
 }
 
-button {
-  min-height: 200px
+button.action-button {
+  font-family: Futura, "Century Gothic", CenturyGothic, AppleGothic, "Trebuchet MS", Arial, sans-serif;
+  color: #333;
+  min-height: 185px;
+  background: #fff;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+button.action-button:hover {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   background: #a25a99;
+}
+
+button.action-button:hover span.icon {
+  opacity: 0.7;
 }
 
 body.loading button.btn:not(:disabled):not(.disabled) {
