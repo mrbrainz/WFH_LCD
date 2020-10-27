@@ -1,0 +1,81 @@
+body {
+  background: #f3f3f3;
+}
+
+#button-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  margin: 20px 0 30px;
+}
+
+
+.button {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+button {
+  min-height: 200px
+}
+
+body.loading button.btn:not(:disabled):not(.disabled) {
+  cursor: default;
+}
+
+#title-contain {
+  padding: 20px 20px 20px 100px;
+  background: url(brainz-small.png) left center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+#throbber {
+  position: absolute;
+  top: 40px;
+  left: 43px;
+  background: url(monkey-magic-1.gif) center center no-repeat;
+  width: 150px;
+  height: 0px;
+}
+
+.loading #throbber {
+  height: 82px;
+}
+
+h1, h2, h3 {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+h1 span, h2, h3 {
+  font-weight: bold;
+}
+
+h2 span, h3 span {
+  font-weight: normal;
+}
+
+h2, h3 {
+  font-size: 0.7em;
+}
+h2 {
+  margin-bottom: 10px;
+}
+
+#last-status {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+
+#last-status.error {
+  border-color: #f00;
+  color: #f00;
+}
